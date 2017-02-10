@@ -7,11 +7,11 @@ ssh:
 
 vms:
 
-  - name: pe-201640-master
+  - name: pe-201643-master
     box: puppetlabs/centos-7.2-64-nocm
     autostart: false
     roles:
-      - pe-201640-master
+      - pe-201643-master
       - pe-forward-console
       - pe-memory-tuning2
       - el-stop-firewall
