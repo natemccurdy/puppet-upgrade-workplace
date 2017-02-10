@@ -5,27 +5,27 @@ class example::base::users {
     ensure    => absent,
   }
   user { root:
-    password  => '$1$v4K9E8Wj$gZIHJ5JtQL5ZGZXeqSSsd0',
+    password => '$1$v4K9E8Wj$gZIHJ5JtQL5ZGZXeqSSsd0',
   }
   if $::user_exists_oracle {
     user { oracle:
       managehome => true,
-      password  => '$1$v4K9E8Wj$gZIHJ5JtQL5ZGZXeqSSsd0',
+      password   => '$1$v4K9E8Wj$gZIHJ5JtQL5ZGZXeqSSsd0',
     }
   }
   if $::user_exists_weblogic {
     user { weblogic:
-      password  => '$1$v4K9E8Wj$gZIHJ5JtQL5ZGZXeqSSsd0',
+      password => '$1$v4K9E8Wj$gZIHJ5JtQL5ZGZXeqSSsd0',
     }
   }
   if $::user_exists_splex {
     user { splex:
-      password  => '$1$v4K9E8Wj$gZIHJ5JtQL5ZGZXeqSSsd0',
+      password => '$1$v4K9E8Wj$gZIHJ5JtQL5ZGZXeqSSsd0',
     }
   }
   if $::user_exists_infraadm {
     user { infraadm:
-      password  => '$1$v4K9E8Wj$gZIHJ5JtQL5ZGZXeqSSsd0',
+      password => '$1$v4K9E8Wj$gZIHJ5JtQL5ZGZXeqSSsd0',
     }
   }
 }
@@ -69,7 +69,7 @@ class example::base::config {
     ensure    => latest,
   }
   package { "man-db":
-    ensure    => latest,
+    ensure => latest,
   }
   package { "nfs-utils":
     ensure    => present,
@@ -77,6 +77,12 @@ class example::base::config {
   service { "crond":
     ensure    => running,
     enable    => true,
+  }
+  limits::domain { 'maxlogins':
+    maxlogins => {
+      'soft' => '4',
+      'hard' => '5',
+    },
   }
   cron { ntpdate:
     ensure     => present,
@@ -86,7 +92,7 @@ class example::base::config {
 #    require    => Package[ntpdate],
   }
   file { "/etc/init.d/firstboot":
-    ensure     => absent,
+    ensure     => Absent,
   }
 }
 class example::admin::users {

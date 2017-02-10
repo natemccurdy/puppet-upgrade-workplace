@@ -13,7 +13,7 @@ class selinux::params (
   ) {
   case $::osfamily {
     'RedHat': {
-      if $::operatingsystemmajrelease < '7' {
+      if versioncmp('7', $::operatingsystemrelease) == 1 {
         $selinux_policy_devel = 'selinux-policy'
       } else {
         $selinux_policy_devel = 'selinux-policy-devel'
