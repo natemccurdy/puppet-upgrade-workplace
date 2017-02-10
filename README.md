@@ -22,19 +22,6 @@ Note: You need the vmware vagrant provider plugin to use vagrant with vmware.
   - `vagrant plugin install oscar`:
     This will install the `oscar` Vagrant plugin.
     https://github.com/oscar-stack/oscar
-    
-### Install PE Builds
-
-You may need to download and install the PE build to your local machine. Download:
-
-  - PE 3.8.6: https://pm.puppetlabs.com/puppet-enterprise/3.8.6/puppet-enterprise-3.8.6-el-7-x86_64.tar.gz
-  
-  - PE 2014.2.0: https://pm.puppetlabs.com/puppet-enterprise/2016.4.0/puppet-enterprise-2016.4.0-el-7-x86_64.tar.gz
-
-  ```shell
-  vagrant pe-build copy /path/to/pe-build.gz
-  ```
-This will install the pe-build to a specific location known to the vagrant plugin
 
 ## Comparing Catalogs
 
@@ -43,6 +30,7 @@ This will install the pe-build to a specific location known to the vagrant plugi
 ```shell
 vagrant up pe-386-master
 ```
+
 ```shell
 vagrant ssh pe-386-master
 ```
