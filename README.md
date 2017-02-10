@@ -6,22 +6,22 @@ This project provides a Vagrant environment for demonstrating the process of upg
 
 ### Install Vagrant 1.5+
 
-https://www.vagrantup.com
+<https://www.vagrantup.com>
 
 ### Install VirtualBox or VMWare
 
-https://www.virtualbox.org/wiki/Downloads
+* <https://www.virtualbox.org/wiki/Downloads>
 
-https://my.vmware.com/web/vmware/info?slug=desktop_end_user_computing/vmware_fusion/8_0
+* <https://my.vmware.com/web/vmware/info?slug=desktop_end_user_computing/vmware_fusion/8_0>
 
-
-Note: You need the vmware vagrant provider plugin to use vagrant with vmware.
+  > Note: You will need the [Vagrant VMware provider](https://www.vagrantup.com/docs/vmware/installation.html) to use Vagrant with VMWare.
 
 ### Install Vagrant Plugins
 
-  - `vagrant plugin install oscar`:
-    This will install the `oscar` Vagrant plugin.
-    https://github.com/oscar-stack/oscar
+* `vagrant plugin install oscar`:
+
+  This will install the `oscar` Vagrant plugin.
+  <https://github.com/oscar-stack/oscar>
 
 ## Comparing Catalogs
 
