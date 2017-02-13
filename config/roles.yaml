@@ -34,13 +34,13 @@ roles:
     provisioners:
       - {type: pe_bootstrap, role: !ruby/sym master, version: '2016.4.3'}
 
-  pe-386-master:
+  pe-387-master:
     provisioners:
-      - {type: pe_bootstrap, role: !ruby/sym master, version: '3.8.6'}
+      - {type: pe_bootstrap, role: !ruby/sym master, version: '3.8.7'}
 
-  pe-386-agent:
+  pe-387-agent:
     provisioners:
-      - {type: pe_bootstrap, role: !ruby/sym agent, master: 'pe-386-master', version: '3.8.6'}
+      - {type: pe_bootstrap, role: !ruby/sym agent, master: 'pe-387-master', version: '3.8.7'}
 
   fix_resolv_conf:
     provisioners:

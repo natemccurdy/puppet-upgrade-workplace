@@ -20,7 +20,7 @@ vms:
       - 2gb-memory
       - base
 
-  - name: pe-386-master
+  - name: pe-387-master
     box: puppetlabs/centos-7.2-64-nocm
     roles:
       - add_bootstap_gems
@@ -28,7 +28,7 @@ vms:
       - copy_yaml_cache
       - run_r10k_deploy
       - set_noop_master
-      - pe-386-master
+      - pe-387-master
       - pe-forward-console
       - pe-memory-tuning
       - el-stop-firewall
@@ -37,11 +37,11 @@ vms:
       - 2gb-memory
       - base
 
-  - name: pe-386-agent
+  - name: pe-387-agent
     box: puppetlabs/centos-7.2-64-nocm
     autostart: false
     roles:
-      - pe-386-agent
+      - pe-387-agent
       - el-stop-firewall
       - el-fix-path
       - fix_resolv_conf
