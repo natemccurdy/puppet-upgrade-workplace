@@ -30,17 +30,17 @@ roles:
         inline: '/opt/puppet/bin/puppet config set noop true --section main'
         type: shell
 
-  pe-201643-master:
+  pe-20164-master:
     provisioners:
       - {type: pe_bootstrap, role: !ruby/sym master, version: '2016.4.3'}
 
-  pe-387-master:
+  pe-38-master:
     provisioners:
       - {type: pe_bootstrap, role: !ruby/sym master, version: '3.8.7'}
 
-  pe-387-agent:
+  pe-38-agent:
     provisioners:
-      - {type: pe_bootstrap, role: !ruby/sym agent, master: 'pe-387-master', version: '3.8.7'}
+      - {type: pe_bootstrap, role: !ruby/sym agent, master: 'pe-38-master', version: '3.8.7'}
 
   fix_resolv_conf:
     provisioners:

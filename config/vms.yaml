@@ -7,11 +7,11 @@ ssh:
 
 vms:
 
-  - name: pe-201643-master
+  - name: pe-20164-master
     box: puppetlabs/centos-7.2-64-nocm
     autostart: false
     roles:
-      - pe-201643-master
+      - pe-20164-master
       - pe-forward-console
       - pe-memory-tuning2
       - el-stop-firewall
@@ -20,7 +20,7 @@ vms:
       - 2gb-memory
       - base
 
-  - name: pe-387-master
+  - name: pe-38-master
     box: puppetlabs/centos-7.2-64-nocm
     roles:
       - add_bootstap_gems
@@ -28,7 +28,7 @@ vms:
       - copy_yaml_cache
       - run_r10k_deploy
       - set_noop_master
-      - pe-387-master
+      - pe-38-master
       - pe-forward-console
       - pe-memory-tuning
       - el-stop-firewall
@@ -37,11 +37,11 @@ vms:
       - 2gb-memory
       - base
 
-  - name: pe-387-agent
+  - name: pe-38-agent
     box: puppetlabs/centos-7.2-64-nocm
     autostart: false
     roles:
-      - pe-387-agent
+      - pe-38-agent
       - el-stop-firewall
       - el-fix-path
       - fix_resolv_conf

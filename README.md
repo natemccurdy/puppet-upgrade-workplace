@@ -36,8 +36,8 @@ It provides a Vagrant environment that comes pre-built with:
 Bring up and connect to the PE 3.8 master:
 
 ```shell
-vagrant up pe-386-master
-vagrant ssh pe-386-master
+vagrant up pe-38-master
+vagrant ssh pe-38-master
 ```
 
 Run the Catalog Preview tool to generate a catalog comparison:
